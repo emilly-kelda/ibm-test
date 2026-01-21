@@ -1,0 +1,158 @@
+Hey, and welcome to chapter nine.
+This is Python dictionaries.
+My favorite chapter in the whole book is files because that's where it sorta
+comes together.
+This may be your favorite chapter.
+Python dictionaries are one of the things that people sort of fall in love with,
+and Python is like, I can do so many things with dictionaries.
+And dictionaries are our second data structure, our second kind of collection.
+And the basic definition of a collection is
+more than one thing in a single variable, and a way of indexing, and looking up, and
+manipulating things in that single variable.
+And so, we have the list, and now we have the dictionary.
+And between lists and dictionaries, you pretty much get the two most important and
+most basic data structures, not just in Python, but in any programming language.
+So to review the idea of collections,
+we put more than one thing in that whereas a regular old variable
+that's not a collection and non-collection variable like x.
+We stick a 2 in, we say x equals 4, and we sort of implicitly know that now it has
+a 4 in it, but the 2 is long gone, it's been overwritten.
+So the two collections we've talked about, the list is a very ordered collection,
+everything is very precise, zero, one, two, three,
+four, you append at the end, and when you start deleting, you sort of,
+it's always stays compacted in the position is the key to it.
+But a dictionary is a more of a mess, you put things in and
+you give them a label, and you get things back out.
+And so, they don't always stay in order, the order shifts around.
+But they're super powerful because it's a key value pair, and you give each item
+a key, you give it a key on the way in, and you get a key on the way back out.
+And so, inside of a dictionary, everything has to have a label.
+You can't just put something in a dictionary,
+you have to give it a label and a value, or a key and a value.
+And so, the key is, when we say key, it's like the thing to unlock or
+the thing to find that thing.
+It's a general concept in many languages called an Associative Array, and
+you can kinda look up and learn a bit more about Associate Arrays.
+And in most languages, like Perl or PHP, the Associative Array is, again,
+most people's favorite data structure because you can do so many things with it.
+So dictionaries are Python's most powerful collection.
+It's like a little baby database, key value.
+You look something up, either name and a phone number, or a phone number and name.
+But there's a key and a value in there.
+And like I said, these concept of dictionaries has many different names in
+many languages like HashMaps in Java or Property Bags in C#, or
+Associative Arrays in Perl or PHP.
+But the basic are the same thing, they're memory-based key value stores.
+So like I said,
+the whole idea of these collections is they have more than one thing.
+But the question is, how you put stuff in and how you get stuff out is what changes.
+And so here, we're gonna make a dictionary.
+And this is a constructor that basically says, make me an empty dictionary object.
+If we're doing this with a constant, we just use a curly braces.
+Curly braces are for dictionaries.
+And then, so purse is a variable of type dictionary, and it now has nothing in it.
+Whereas in a list, we had to append stuff.
+We use the index operator on the left-hand side of an assignment statement
+to indicate the key.
+So this ends up being the value, and this is the key, the key value pair.
+And so, we're putting 12 into the purse, but on the way in,
+we're labeling it with money, right?
+And so, 12 is going in, 12 is the value, and we're putting it into purse, but
+we're storing it under money.
+So I would say this as purse of money equals 12, money is the label,
+the index, the tag, whatever you wanna call it,
+but it is the way we're going to label this number 12 as we go in.
+And we're gonna put 3 in and we're gonna label it candy, and
+we're gonna put 75 in it, and we're gonna label it tissues.
+So inside a purse, we have these key value pairs, say hey, what's in purse?
+Well, money is 3, under the tag tissues, we have 75, and
+under the tag candy, we have 3.
+Its important that the order of these dictionaries is somewhat unpredictable.
+They don't always come out in the same order.
+And so, we’ll have to learn later about how to sort them and
+how to do stuff to them, but think of them for now as an unsorted bag of values,
+but it does remember no matter how they get moved around,
+what the label to value mapping is.
+To pull something out, we say purse ['candy'].
+So we use the exact label that we used to put it in,
+we use that to pull it back out.
+So purse ['candy'] is 12, so it says, go look up and find in this dictionary,
+the thing that has a key of candy and pull then that number out.
+And so, that's the number that comes out and gets printed.
+We can update these variables though a dictionary contents are mutable,
+which means they can be changed.
+So we can go grab the old value purse ['candy'] which is a 3, add 2 to it, and
+then put a 5 back in.
+And then, we can print this out and then the 3 has been modified to become 5.
+So we can use them on right-hand sides of expressions,
+on left-hand sides of expressions, away you go.
+So it's really a lot like this,
+if we look at an example from a previous chapter on these lists.
+Now, we make an empty list, we make an empty dictionary.
+We add into position 0, which is because it's empty.
+At 21, we put in position 183.
+Here, we put into this dictionary under the key age 21, and
+into this dictionary under the key course, we put in 182, right?
+And if we print them, we see that there is an implicit position,
+position 0 and position 1.
+There's an implicit position so we don't have to show the position, I mean,
+Python could choose to show that but it doesn't.
+And then, if we print a dictionary, it shows us with curly braces to say this
+is a dictionary, not a list, and it uses this key colon value, key colon value.
+And order, again, isn't the same.
+We put in age then course and we got out course then age.
+Just don't expect the order of dictionaries to be a predictable thing.
+And then continuing on, they're mutable, which means we say, lists sub zero.
+And this is the index.
+So in a list, the index is the position and we put a 23.
+We put a 23 into position 0, and so when we see that, we see a 23 coming out.
+And here, if we're gonna change something,
+we're gonna say, go find that thing marked with the tag age and replace that with 23.
+So that puts the 23 in here and replaces it with 23, and so
+when we print that out, we get 23.
+But basically, they're similar but dictionaries have these labels that
+we have to use everywhere and lists have positions.
+So lists are compacted, they all start at 0, even if there's none in there,
+it doesn't start at 0 but if there's one or more things, the first one is always 0.
+And while we haven't deleted stuff from list, once we start deleted
+stuff from list, they get compacted but not true from dictionaries.
+They just kinda remove the key cuz they're not particularly in any order anyways.
+So again, we can see this all happening.
+I'd like to think of in my mind a picture of these things,
+where a list has kind of a key or the way we look something up 0, 1.
+And if there were more of these, it would 0, 1, and 2.
+Whereas the dictionary, the key is some kind of a string,
+this is how we look it up, and they both have values, right?
+They both have values in them, and that's how it works, and
+so when we put these things in, the list gets extended.
+It's always gonna be extended at the end, if you call to pin again there would be
+a sub two in here, and it puts a number in there, and we print them out, and
+then when we go and change this 23, put it in here, it gets wiped out.
+They're mutable, which means these values are mutable.
+The keys are sort of not in list, the keys are simply an artifact.
+You can't change them but you can delete items, you can delete items from list
+which we haven't done yet, but we will be able to delete items from list.
+And so, the same thing is true.
+We can delete items here, which we haven't done yet, but you can also change them.
+So, ddd ['age'] will go look up age, and then stick 23 in there,
+and that's changing.
+So they're very similar structures,
+the key difference, the significant difference is that the key mechanism,
+the way we look up an entry inside the collection is different between them.
+We can make constants and
+the printouts of these things conveniently in Python show us the constant syntax.
+So it's like, what's in this dictionary?
+So we start with a curly brace for a constant, a curly brace.
+And then we have key, value, key, value, key, value.
+Now, I have been using strings for keys and numbers for
+values, which is actually a pretty common shape but doesn't have to be that.
+So just because I'm using, doesn't mean it's always that way.
+So this creates a dictionary constant, and
+then that gets assigned in the jjj variable.
+Just like it's no different than saying x = 3,
+this is an integer constant that gets assigned into x.
+We print it out, and it looks exactly kinda the same but
+the order's different because dictionaries messed with the order.
+You can make empty dictionaries with just curly braces and print those out as well.
+So up next, we're gonna start talking about the kinds of applications that we're
+going to use, the kinds of problems that we're gonna solve using dictionaries.
